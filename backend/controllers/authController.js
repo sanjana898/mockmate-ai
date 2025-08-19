@@ -50,8 +50,8 @@ const registerUser = async (req, res) => {
 // @access Public
 
 const loginUser = async (req, res) => {
-    try{
         res.write("this is login");
+    try{
         const { email, password } = req.body;
 
         const user = await User.findOne({ email });
