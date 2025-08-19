@@ -15,7 +15,7 @@ const app = express();
 //middleware to handle CORS
 app.use(
     cors({
-        origin: "https://mockmate-ai-78n8.vercel.app/",
+        origin: "https://mockmate-ai-78n8.vercel.app",
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
     })
