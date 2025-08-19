@@ -18,6 +18,7 @@ app.use(
         origin: "https://mockmate-ai-78n8.vercel.app",
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
+        credentials: true // Add this if you're sending cookies/auth headers
     })
 );
 
