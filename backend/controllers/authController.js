@@ -50,7 +50,6 @@ const registerUser = async (req, res) => {
 // @access Public
 
 const loginUser = async (req, res) => {
-        res.write("this is login");
     try{
         const { email, password } = req.body;
 
