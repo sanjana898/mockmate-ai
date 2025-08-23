@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const generateToken = (userId) => {
-    return jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
+    return jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
 
 };
 
@@ -87,7 +87,7 @@ const loginUser = async (req, res) => {
 
 const getUserProfile = async (req, res) => {
     try{
-        const user = await User.findById(req.user.id).select("-password");
+        const user = await User.findById(req.user.userId).select("-password");
         if(!user){
             return res.status(404).json({ message: "User not found" });
         }
